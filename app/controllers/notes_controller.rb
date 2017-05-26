@@ -19,12 +19,12 @@ class NotesController < ApplicationController
     p $var
     p "8"*40
 
-    account_sid = 'AC606606c7b0730c8b6bf803f867dee6a3'#ENV['ACCOUNT_SID']
-    auth_token = '09d76c274adb522ad0d25fc16cece014'#ENV['TWILIO_AUTH_TOKEN']
+    account_sid = ENV['ACCOUNT_SID']
+    auth_token = ENV['TWILIO_AUTH_TOKEN']
     @client = Twilio::REST::Client.new account_sid, auth_token
     @message = @client.messages.create(
-      to: "+19252165786",
-      from: "+19259058076",
+      to: "+1925xxxxxxx",
+      from: "+1925xxxxxxx",
       body: $var
     )
     render :index
