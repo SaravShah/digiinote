@@ -36,7 +36,7 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'rails-controller-testing'
 gem 'twilio-ruby', '~> 4.11.1'
-gem 'rack'
+
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
@@ -52,6 +52,7 @@ group :development, :test do
   gem 'capybara'
   gem 'launchy'
   gem 'selenium-webdriver', '~> 2.53', '>= 2.53.4'
+  
 
 end
 
