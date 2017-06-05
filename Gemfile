@@ -52,7 +52,7 @@ group :development, :test do
   gem 'capybara'
   gem 'launchy'
   gem 'selenium-webdriver', '~> 2.53', '>= 2.53.4'
-  gem 'rspec-rails'
+  gem 'rspec-rails',      ">= 2.0.0.beta"
 
 end
 
