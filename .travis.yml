@@ -21,4 +21,4 @@ before_install:
 - tar -xzf credentials.tar.gz
 - mkdir -p lib
 
-- gcloud auth activate-service-account --key-file client_secrets.json
+- gcloud auth activate-service-account saravsshah@gmail.com --key-file client_secrets.json
