@@ -18,7 +18,7 @@ env:
 before_install:
   # Install Google App Engine Python SDK
 - if [ ! -d "${GAE_PYTHONPATH}" ]; then
-    python scripts/fetch_gae_sdk.rb $(dirname "${GAE_PYTHONPATH}");
+    ruby scripts/fetch_gae_sdk.rb $(dirname "${GAE_PYTHONPATH}");
   fi
 
 
