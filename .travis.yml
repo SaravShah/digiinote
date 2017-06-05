@@ -12,5 +12,6 @@ rvm:
 before_install:
 - openssl aes-256-cbc -K $encrypted_954526e24b10_key -iv $encrypted_954526e24b10_iv
   -in client_secrets.json.enc -out client_secrets.json -d
-
-GOOGLE_APPLICATION_CREDENTIALS: "${HOME}/google_application_credentials.json"
+- openssl aes-256-cbc -K $encrypted_954526e24b10_key -iv $encrypted_954526e24b10_iv
+  -in google_application_credentials.json.enc -out google_application_credentials.json
+  -d
