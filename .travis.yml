@@ -7,3 +7,8 @@ rvm:
 - 2.3
 - jruby
 - rbx-2
+env:
+  global:
+    - GOOGLE_APPLICATION_CREDENTIAL=~/google_application_credential.json
+    - CLIENT_SECRETS =~/client_secrets.json
+    
