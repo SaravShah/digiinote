@@ -2,8 +2,6 @@ services:
 - postgresql
 before_script:
 - psql -c 'create database fit_test;' -U postgres
-# script:
-# - bundle exec rake rspec
 language: ruby
 rvm:
 - 2.3
@@ -11,5 +9,4 @@ rvm:
 - rbx-2
 before_install:
 - openssl aes-256-cbc -K $encrypted_954526e24b10_key -iv $encrypted_954526e24b10_iv
-  -in client_secrets.json.enc -out client_secrets.json -d
-
+  -in credentials.tar.gz.enc -out credentials.tar.gz -d
