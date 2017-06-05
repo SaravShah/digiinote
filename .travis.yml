@@ -1,8 +1,10 @@
-# services:
-#   - postgresql
-# before_script:
-#   -psql -c 'create database digii_test;' -U postgresql
-#   - RAILS_ENV=test bundle exec rake db:migrate
+services:
+- postgresql
+before_script:
+- psql -c 'create database fit_test;' -U postgres
+- bin/rails db:migrate RAILS_ENV=test
+script:
+- bundle exec rake rspec
 language: ruby
 rvm:
  - 2.3

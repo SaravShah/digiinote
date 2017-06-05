@@ -5,10 +5,11 @@
 ##################################################
 
 require 'spec_helper'
-require 'capybara/rails'
-require 'capybara/rspec'
-include Capybara::DSL
-require "selenium-webdriver"
+require 'rails_helper'
+# require 'capybara/rails'
+# require 'capybara/rspec'
+# include Capybara::DSL
+# require "selenium-webdriver"
 
 
 RSpec.describe NotesController, type: :controller do
