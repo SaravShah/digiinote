@@ -2,8 +2,8 @@ services:
 - postgresql
 before_script:
 - psql -c 'create database fit_test;' -U postgres
-script:
-- bundle exec rake rspec
+# script:
+# - bundle exec rake rspec
 language: ruby
 rvm:
 - 2.3
