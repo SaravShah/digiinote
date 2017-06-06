@@ -4,7 +4,7 @@ before_script:
 - psql -c 'create database fit_test;' -U postgres
 language: ruby
 rvm:
-- 2.2.2
+- 2.3.1
 - jruby
 - rbx-2
 cache:
