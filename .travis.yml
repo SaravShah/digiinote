@@ -3,6 +3,8 @@ services:
 before_script:
 - psql -c 'create database fit_test;' -U postgres
 language: ruby
+script:
+- bundle exec rake rspec
 rvm:
 - 2.3.1
 - jruby
@@ -20,3 +22,7 @@ before_install:
 - mkdir -p lib
 - gcloud auth activate-service-account --key-file client-secret.json
 
+before_deploy:
+- gem install mime-types -v 2.6.2
+- gem install rack -v '2.0.3'
+- gem install nio4r -v '2.1.0'
