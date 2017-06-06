@@ -38,6 +38,9 @@ gem 'rails-controller-testing'
 gem 'twilio-ruby', '~> 4.11.1'
 gem 'google-cloud', '~> 0.20.0'
 gem 'rack', '~> 2.0.3'
+
+gem 'mime-types','~> 2.6.2'
+gem 'nio4r',  '~> 2.1.0'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
