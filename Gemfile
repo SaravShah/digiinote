@@ -36,8 +36,11 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'rails-controller-testing'
 gem 'twilio-ruby', '~> 4.11.1'
+gem 'google-cloud', '~> 0.20.0'
+gem 'rack', '~> 2.0.3'
 
-
+gem 'mime-types','~> 2.6.2'
+gem 'nio4r',  '~> 2.1.0'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
@@ -52,6 +55,7 @@ group :development, :test do
   gem 'capybara'
   gem 'launchy'
   gem 'selenium-webdriver', '~> 2.53', '>= 2.53.4'
+  gem 'rspec-rails',      ">= 2.0.0.beta"
 
 end
 
@@ -62,7 +66,6 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-  gem 'rspec-rails'
 
 end
 

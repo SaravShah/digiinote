@@ -1,5 +1,3 @@
-
-
 class NotesController < ApplicationController
   include NotesHelper
   
@@ -17,10 +15,6 @@ class NotesController < ApplicationController
   end
 
   def send_twilio
-    p "8"*40
-    p $var
-    p "8"*40
-
     account_sid = ENV['ACCOUNT_SID']
     auth_token = ENV['TWILIO_AUTH_TOKEN']
     @client = Twilio::REST::Client.new account_sid, auth_token
@@ -33,7 +27,6 @@ class NotesController < ApplicationController
   end
 
   def create
-
     begin
         if request.xhr?
           text = camera_reader(params[:picture])
@@ -88,9 +81,9 @@ class NotesController < ApplicationController
       @note.update(text: compiled_text)
       redirect_to "/notes/#{@note.id}/edit"
     rescue Exception => e
-      p "*"*50
-      p e.message
-      p "*"*50
+      # p "*"*50
+      # p e.message
+      # p "*"*50
       if e.message == "undefined method `text' for nil:NilClass"
         flash[:notice] = "No readable text in picture, try again with a new image"
       elsif e.message.include?("8:Insufficient tokens") || e.message.include?("14")

@@ -5,9 +5,8 @@ class SessionsController < ApplicationController
 
 	def save_google
 		credentials = get_credentials
-
-      auth_url = credentials.authorization_uri
-      redirect_to(auth_url.to_s)
+    auth_url = credentials.authorization_uri
+    redirect_to(auth_url.to_s)
   end
 
   def create_callback
